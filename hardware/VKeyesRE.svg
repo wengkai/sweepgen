@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="18mm"
+   height="25mm"
+   viewBox="0 0 63.779528 88.582677"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="VKeyesRE.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.2427556"
+     inkscape:cx="31.889764"
+     inkscape:cy="44.291339"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="false"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-others="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="755"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3344"
+       units="mm"
+       spacingx="9.0000003"
+       spacingy="8.9999997"
+       empspacing="1" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-963.77953)">
+    <rect
+       style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3346"
+       width="63.779526"
+       height="88.883827"
+       x="0"
+       y="963.47833" />
+    <circle
+       style="fill:#ffff00"
+       id="path3371"
+       cx="53.867393"
+       cy="1043.500"
+       r="2.54" />
+    <circle
+       style="fill:#ffff00"
+       id="path3433"
+       cx="45.014805"
+       cy="1043.500"
+       r="2.54" />
+    <circle
+       style="fill:#ffff00"
+       id="path3438"
+       cx="35.905106"
+       cy="1043.500"
+       r="2.54" />
+    <circle
+       style="fill:#ffff00"
+       id="path3440"
+       cx="27.225477"
+       cy="1043.500"
+       r="2.54" />
+    <circle
+       style="fill:#ffff00"
+       id="path3442"
+       cx="17.93471"
+       cy="1043.500"
+       r="2.54" />
+    <rect
+       style="fill:#00ff00"
+       id="rect3444"
+       width="40.805573"
+       height="40.805595"
+       x="16.748116"
+       y="978.27979" />
+    <circle
+       style="fill:#ff00ff"
+       id="path3449"
+       cx="37.281487"
+       cy="998.04181"
+       r="9" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:39.93771362px;line-height:253.99999619%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1028.8068"
+       y="-4.4254241"
+       id="text3454"
+       sodipodi:linespacing="254%"
+       transform="matrix(0.011162,0.9999377,-0.9999377,0.011162,0,0)"
+       inkscape:transform-center-x="4.0046419"
+       inkscape:transform-center-y="2.2425969"><tspan
+         sodipodi:role="line"
+         id="tspan3456"
+         x="1028.8068"
+         y="-4.4254241"
+         style="font-size:5.00000048px;line-height:253.99999619%;fill:#ffffff">GND</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="24.757401"
+       y="1038.5271"
+       id="text3458"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3460"
+         x="24.757401"
+         y="1038.5271"
+         style="fill:#ffffff">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1027.8455"
+       y="-89.666077"
+       id="text3462"
+       sodipodi:linespacing="125%"
+       transform="matrix(-0.05396485,0.99854284,-0.99854284,-0.05396485,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3464"
+         x="1027.8455"
+         y="-89.666077"
+         style="fill:#ffffff">SW</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1033.2554"
+       y="-31.91292"
+       id="text3466"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.0105746,0.99994409,-0.99994409,0.0105746,0,0)"
+       inkscape:transform-center-x="-4.6453845"
+       inkscape:transform-center-y="-4.1648301"><tspan
+         sodipodi:role="line"
+         id="tspan3468"
+         x="1033.2554"
+         y="-31.91292"
+         style="fill:#ffffff">DT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1029.4945"
+       y="-62.519341"
+       id="text3470"
+       sodipodi:linespacing="125%"
+       transform="matrix(-0.01032395,0.99994671,-0.99994671,-0.01032395,0,0)"
+       inkscape:transform-center-x="5.4463129"
+       inkscape:transform-center-y="-13.135228"><tspan
+         sodipodi:role="line"
+         id="tspan3472"
+         x="1029.4945"
+         y="-62.519341"
+         style="fill:#ffffff">CLK</tspan></text>
+  </g>
+</svg>
