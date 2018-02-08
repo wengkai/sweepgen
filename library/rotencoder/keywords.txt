@@ -1,18 +1,18 @@
 #######################################
-# Syntax Coloring Map For Button
+# Syntax Coloring Map For Rotate Encoder
 #######################################
  
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
  
-Button KEYWORD1
+RotateEncoder KEYWORD1
  
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
  
-isPressed    KEYWORD2
+getCount    KEYWORD2
  
 #######################################
 # Constants (LITERAL1)
