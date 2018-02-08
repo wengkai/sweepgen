@@ -1,0 +1,1 @@
+This is an Arduino library for a rotate encoder with CLK and DT pins.
