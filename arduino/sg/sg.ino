@@ -1,3 +1,7 @@
+#include <Adafruit_SI5351.h>
+#include <asserts.h>
+#include <errors.h>
+
 #include <U8g2lib.h>
 #include <U8x8lib.h>
 
@@ -15,6 +19,9 @@ RotateEncoder re(2,3);
 
 //  OLED-----------------------------
 U8G2_SSD1306_128X64_NONAME_1_HW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // All Boards without Reset of the Display
+
+//  5351------------------------------
+Adafruit_SI5351 clockgen = Adafruit_SI5351();
 
 void showPrompt(const char *s)
 {
@@ -51,6 +58,13 @@ void showFreq(const char* mode, unsigned long freq, int position)
 void setup() {
   Serial.begin(9600);
   u8g2.begin(); 
+  if (clockgen.begin() != ERROR_NONE)
+  {
+    /* There was a problem detecting the IC ... check your connections */
+    Serial.print("Ooops, no Si5351 detected ... Check your wiring or I2C ADDR!");
+    while(1);
+  }
+  Serial.println("OK!");
   showPrompt("SG-1");
 }
 
