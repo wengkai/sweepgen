@@ -27,7 +27,7 @@ void RotateEncoder::clk_pulse() {
   int dt = digitalRead(pinDT);
   if ( clk != lastClk ) {
     lastClk = clk;
-    count += (clk != dt)? 1:-1;
+    count += (clk != dt)? step:-step;
   }
 }
 

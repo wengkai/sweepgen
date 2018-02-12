@@ -18,7 +18,9 @@
 class RotateEncoder {
 public:
   RotateEncoder(int pin_clk, int pin_dt);
-  int getCount() { return count; }
+  void setCount(long count) { this->count = count; }
+  long getCount() { return count; }
+  void setStep(long step) { this->step = step; }
 private:
   static void isp_clk0();
   static void isp_clk1();
@@ -27,7 +29,8 @@ private:
   int pinDT;
   unsigned long lastT = 0;
   int lastClk = 0;  
-  int count = 0;
+  long count = 0;
+  long step = 1;
 };
 
 #endif
