@@ -9,17 +9,11 @@
 #include <button.h>
 #include <rotencoder.h>
 
-int mode = 0;
-unsigned long step = 1000;
-unsigned long freq=14000000;
-
-//  Button---------------------------------
-
+//  Buttons---------------------------------
 Button btnMode(5);
 Button btnStep(4);
 
 //  RotateEncoder--------------------------
-
 RotateEncoder re(2,3);
 
 //  OLED-----------------------------
@@ -27,6 +21,84 @@ U8G2_SSD1306_128X64_NONAME_1_HW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SD
 
 //  5351------------------------------
 Si5351 si5351;
+
+void setup() {
+  Serial.begin(9600);
+
+  u8g2.begin(); 
+  
+  boolean i2c_found = si5351.init(SI5351_CRYSTAL_LOAD_8PF, 0, 0);
+  if ( !i2c_found ) {
+    showPrompt("NO 5351");
+    for ( ;; );
+  }
+
+  showPrompt("SG-1");
+
+  si5351.output_enable(SI5351_CLK0, 0);
+}
+
+int mode = 0;
+unsigned long step = 1000;
+unsigned long freq = 14000000;
+unsigned long spot = 14000000;
+unsigned long begin = 14000000;
+unsigned long end = 14000000;
+
+void loop() {
+  static const char* modeName[] = {
+    "SG-1","SPOT","BEGIN","END","SWEEP"
+  };
+  boolean update = false;
+  if ( btnMode.isPressed() ) {
+    mode = mode+1;
+    if ( mode == 1 ) { //  SPOT
+      freq = spot;
+      switchFreq();
+    } else if ( mode == 2 ) { //  BEGIN
+      spot = freq;
+      freq = begin;
+      switchFreq();
+    } else if ( mode == 3 ) { //  END
+      begin = freq;
+      freq = end;
+      switchFreq();
+    } else if ( mode == 4 ) { //  SWEEP
+      end = freq;
+    } else if ( mode == 5 ) {  //  IDLE
+      mode = 0;
+      si5351.output_enable(SI5351_CLK0, 0);
+    } 
+    Serial.print("Mode:");
+    Serial.println(mode);
+    update = true;
+  }
+  if ( btnStep.isPressed() ) {
+    step = step*10;
+    if ( step == 1000000000UL ) {
+      step = 1;
+    }
+    Serial.print("Step:");
+    Serial.println(step);
+    re.setStep(step);
+    update = true;
+  }
+  if ( re.getCount() != freq ) {
+    freq = re.getCount();
+    Serial.print("Freq:");
+    Serial.println(freq);
+    si5351.set_freq(freq*100ULL, SI5351_CLK0);
+    si5351.update_status();
+    update = true;
+  }
+  if ( update ) {
+    if ( mode ==0 ) {
+      showPrompt(modeName[0]);
+    } else {
+      showFreq(modeName[mode], freq, step);
+    }
+  }
+}
 
 void showPrompt(const char *s)
 {
@@ -69,53 +141,11 @@ void showFreq(const char* mode, unsigned long freq, unsigned long position)
   } while ( u8g2.nextPage() );
 }
 
-void setup() {
-  Serial.begin(9600);
-
+void switchFreq()
+{
   re.setCount(freq);
   re.setStep(step);
-
-  u8g2.begin(); 
-  showPrompt("SG-1");
-
-  boolean i2c_found = si5351.init(SI5351_CRYSTAL_LOAD_8PF, 0, 0);
-  if(!i2c_found)
-  {
-    Serial.println("Device not found on I2C bus!");
-  }
-
-  // Set CLK0 to output 14 MHz
   si5351.set_freq(freq*100ULL, SI5351_CLK0);
+  si5351.output_enable(SI5351_CLK0, 1);
   si5351.update_status();
-}
-
-void loop() {
-  boolean update = false;
-  if ( btnMode.isPressed() ) {
-    mode = mode+1;
-    if (mode==5) mode = 0;
-    Serial.print("Mode:");
-    Serial.println(mode);
-  }
-  if ( btnStep.isPressed() ) {
-    step = step*10;
-    if ( step == 1000000000UL ) {
-      step = 1;
-    }
-    Serial.print("Step:");
-    Serial.println(step);
-    re.setStep(step);
-    update = true;
-  }
-  if ( re.getCount() != freq ) {
-    freq = re.getCount();
-    Serial.print("Freq:");
-    Serial.println(freq);
-    si5351.set_freq(freq*100ULL, SI5351_CLK0);
-    si5351.update_status();
-    update = true;
-  }
-  if ( update ) {
-    showFreq("SPOT", freq, step);
-  }
 }
