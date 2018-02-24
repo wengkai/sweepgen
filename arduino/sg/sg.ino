@@ -66,9 +66,11 @@ Parameter readParameter()
   unsigned int mc;
   Parameter p;
   EEPROM.get(0, mc);
+  // Serial.println(mc);
   if ( mc == MAGIC_CODE ) {
     EEPROM.get(4, p);
     Serial.println("para loaded");
+    // Serial.println(p.spot);
   } else {
     p.spot = 14000000UL;
     p.begin = 14000000UL;
